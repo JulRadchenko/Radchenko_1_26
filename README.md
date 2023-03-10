@@ -2,7 +2,7 @@ print("Введите нужную цифру для K:", end=" ")
 k = int(input())
 file = open("text.txt",'r')
 buffer = ''
-chisl = ''
+chislo = ''
 maxim = '0'
 colich_1 = 0
 colich_2 = 0
@@ -18,7 +18,7 @@ elif buffer:
             chislo = chislo + buffer
             buffer = file.read(1)
         else:
-            if len(chsilo) > k and int(chislo,16) % 2 == 0 and int(chislo,16) < 2048:
+            if len(chsilo) > k and int(chislo,16) % 2 == 0 and int(chislo,16) <= 2048:
                 colich_1 += 1
                 if int(maxim,16) < int(chislo,16):
                     maxim = chislo
