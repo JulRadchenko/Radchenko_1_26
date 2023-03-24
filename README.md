@@ -15,11 +15,8 @@ with open("text.txt",'r') as f:
         print("Файл является пустым")
         colich_2 +=1
     while buffer:
-        while buffer:
-            if buffer != ' ':
-                chislo = chislo + buffer
-            else:
-                break
+        while buffer in ['1','2','3','4','5','6','7','8','9','0','A','B','C','D','E','F']:
+            chislo += buffer
             buffer = f.readline(1)
         if len(chislo) > 0:
             if len(chislo) > k and int(chislo,16) % 2 ==0 and int(chislo,16) <= 2048:
